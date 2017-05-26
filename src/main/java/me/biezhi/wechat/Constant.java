@@ -11,6 +11,7 @@ public class Constant {
 
 	public static final String HTTP_OK = "200";
 	public static final String BASE_URL = "https://webpush2.weixin.qq.com/cgi-bin/mmwebwx-bin";
+	public static final String FILE_URL = "https://file.wx2.qq.com/cgi-bin/mmwebwx-bin/webwxuploadmedia";
 	public static final String JS_LOGIN_URL = "https://login.weixin.qq.com/jslogin";
 	public static final String QRCODE_URL = "https://login.weixin.qq.com/qrcode/";
 	

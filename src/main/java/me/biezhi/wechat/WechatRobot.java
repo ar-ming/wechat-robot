@@ -106,7 +106,7 @@ public class WechatRobot {
 				LOGGER.debug("redirect_uri={}", redirect_uri);
 				LOGGER.debug("base_uri={}", base_uri);
 			} else if (code.equals("408")) {
-				throw new WechatException("登录超时");
+				//throw new WechatException("登录超时");
 			} else {
 				LOGGER.info("扫描code={}", code);
 			}
@@ -168,10 +168,17 @@ public class WechatRobot {
 		LOGGER.info("开启状态通知成功");
 		
 		LOGGER.info("获取联系人...");
-		Constant.CONTACT = wechatService.getContact(wechatMeta);
+		wechatService.getContact(wechatMeta);
 		LOGGER.info("获取联系人成功");
-		LOGGER.info("共有 {} 位联系人", Constant.CONTACT.getContactList().size());
-		
+		LOGGER.info("共有 {} 位联系人", Constant.CONTACT.getMemberList().size());
+		LOGGER.info("获取群信息...");
+		wechatService.webwxsync(wechatMeta);
+		if (Constant.CONTACT.getGroupList() != null) {
+			LOGGER.info("共有 {} 个群", Constant.CONTACT.getGroupList().size());
+		} else {
+			LOGGER.info("共有 {} 个群", 0);
+		}
+		//
 		// 监听消息
 		wechatListener.start(wechatService, wechatMeta);
 	}
