@@ -80,4 +80,6 @@ wechat-robot是基于微信网页版协议开发的普通微信号机器人程�
 2016-02-21 18:53:29,765 INFO [listenMsgMode] me.biezhi.weixin.App | [*] GET https://webpush2.weixin.qq.com/cgi-bin/mmwebwx-bin/synccheck?r=145605200916678&skey=@crypt_a742d75a_acfe5f44c68520a5190a939e0f74ed37&uin=3155248292&sid=WdbalZCr%2BGV33OUD&deviceid=e1456051957&synckey=1_610390336%7C2_610390411%7C3_610390360%7C11_610390233%7C13_610390001%7C201_1456052076%7C1000_1456048420&_=1456052009765
 ```
 
-更多有趣的东西你可以自己研究，比如发送图片，音乐，推送文章等。。
+更多有趣的东西你可以自己研究，比如发送名片，音乐，推送文章等。。
+欢迎大家扫描下面二维码加入微信群讨论。
+![](doc/qrcode.png)
